@@ -10,8 +10,8 @@ public class Day3Problem1Of2 {
         int trees = 0;
         int pointerX = 0;
         int pointerY = 0;
-        while(pointerY < arrayOfCharacters.length){
-            if(arrayOfCharacters[pointerY][pointerX % arrayOfCharacters[0].length] == '#'){
+        while(pointerX < arrayOfCharacters.length){
+            if(arrayOfCharacters[pointerX][pointerY % arrayOfCharacters[0].length] == '#'){
                 ++trees;
             }
             pointerX += slopeX;
@@ -37,8 +37,11 @@ public class Day3Problem1Of2 {
         List<String> listOfLines = AOCUtils.getInputAsStrings("Day3.1Input");
         mapToBidimensionalArray(listOfLines);
 
+        //part1
+        System.out.println(countTrees(1,3));
 
-        System.out.println(countTrees(1,1) * countTrees(3,1) * countTrees(5,1)
-                         * countTrees(7,1) * countTrees(1,2));
+        //part2
+//        System.out.println(countTrees(1,1) * countTrees(3,1) * countTrees(5,1)
+//                         * countTrees(7,1) * countTrees(1,2));
     }
 }
