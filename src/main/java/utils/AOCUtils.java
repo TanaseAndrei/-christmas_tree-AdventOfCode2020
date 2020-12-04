@@ -47,4 +47,9 @@ public class AOCUtils {
 
         return listOfRows;
     }
+
+    public static String[] split(String value, String splitter){
+        return value.split(splitter);
+    }
+
 }
