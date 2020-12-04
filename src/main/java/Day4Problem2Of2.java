@@ -1,5 +1,5 @@
 import utils.AOCUtils;
-
+import static utils.AOCUtils.print;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -58,18 +58,18 @@ public class Day4Problem2Of2 {
                         }
                         break;
                     case "hcl":
-                        if(splittedPair[1].matches("#[a-f0-9]{6}")){
+                        if (splittedPair[1].matches("#[a-f0-9]{6}")) {
                             hcl = true;
                         }
                         break;
                     case "ecl":
                         List<String> listOfColors = List.of("amb", "blu", "brn", "gry", "grn", "hzl", "oth");
-                        if(listOfColors.contains(splittedPair[1])){
+                        if (listOfColors.contains(splittedPair[1])) {
                             ecl = true;
                         }
                         break;
                     case "pid":
-                        if(splittedPair[1].matches("[0-9]{9}")){
+                        if (splittedPair[1].matches("[0-9]{9}")) {
                             pid = true;
                         }
                         break;
@@ -97,7 +97,7 @@ public class Day4Problem2Of2 {
             }
         }
 
-        System.out.println(numberOfValidPassports);
+        print(numberOfValidPassports);
     }
 }
 

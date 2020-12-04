@@ -48,8 +48,11 @@ public class AOCUtils {
         return listOfRows;
     }
 
-    public static String[] split(String value, String splitter){
-        return value.split(splitter);
+    public static String[] split(String value, String regex){
+        return value.split(regex);
     }
 
+    public static void print(Object line){
+        System.out.println(line);
+    }
 }
