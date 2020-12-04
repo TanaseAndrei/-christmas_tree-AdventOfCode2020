@@ -1,5 +1,5 @@
 import utils.AOCUtils;
-
+import static utils.AOCUtils.print;
 import java.util.List;
 
 public class Day2Problem2Of2 {
@@ -25,7 +25,7 @@ public class Day2Problem2Of2 {
             }
         }
 
-        System.out.println(numberOfValidPasswords);
+        print(numberOfValidPasswords);
     }
 }
 

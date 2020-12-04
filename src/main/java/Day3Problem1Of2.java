@@ -1,5 +1,5 @@
 import utils.AOCUtils;
-
+import static utils.AOCUtils.print;
 import java.util.List;
 
 public class Day3Problem1Of2 {
@@ -38,10 +38,10 @@ public class Day3Problem1Of2 {
         mapToBidimensionalArray(listOfLines);
 
         //part1
-        System.out.println(countTrees(1,3));
+        print(countTrees(1,3));
 
         //part2
-//        System.out.println(countTrees(1,1) * countTrees(3,1) * countTrees(5,1)
+//        print(countTrees(1,1) * countTrees(3,1) * countTrees(5,1)
 //                         * countTrees(7,1) * countTrees(1,2));
     }
 }

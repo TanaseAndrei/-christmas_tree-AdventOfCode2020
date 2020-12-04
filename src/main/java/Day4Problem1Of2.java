@@ -1,8 +1,7 @@
 import utils.AOCUtils;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import static utils.AOCUtils.print;
 
 public class Day4Problem1Of2 {
 
@@ -16,6 +15,7 @@ public class Day4Problem1Of2 {
         boolean pid = false;
 
         for (String line : data) {
+
             if (line.contains("byr")) {
                 byr = true;
             }
@@ -43,7 +43,6 @@ public class Day4Problem1Of2 {
             if (line.contains("pid")) {
                 pid = true;
             }
-
         }
 
         return byr && iyr && eyr && hgt && hcl && ecl && pid;
@@ -56,19 +55,17 @@ public class Day4Problem1Of2 {
 
         for (int i = 0; i < listOfLines.size(); i++) {
             String currentLine = listOfLines.get(i);
-            if(!currentLine.isBlank()){
+            if (!currentLine.isBlank()) {
                 passportData.add(currentLine);
-            } else if(currentLine.isBlank()){
-                if(isValid(passportData)){
+            } else if (currentLine.isBlank()) {
+                if (isValid(passportData)) {
                     numberOfValidPasswords++;
                 }
                 passportData = new ArrayList<>();
             }
         }
 
-        System.out.println(numberOfValidPasswords);
+        print(numberOfValidPasswords);
     }
-
-
 }
 
