@@ -5,7 +5,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class AOCUtils {
     public static List<String> getInputAsStrings(String fileName){
@@ -54,5 +56,14 @@ public class AOCUtils {
 
     public static void print(Object line){
         System.out.println(line);
+    }
+
+    public static Set<Character> getAlphabet(){
+        Set<Character> setOfCharacter = new HashSet<>();
+        for(int i = 97; i < (97 - 65) ; i++){
+            setOfCharacter.add((char)i);
+        }
+
+        return setOfCharacter;
     }
 }
